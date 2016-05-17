@@ -1,0 +1,21 @@
+# Site settings
+title: vicision
+header-img: img/home-bg.png
+email: duncan.j.mclachlan@gmail.com
+copyright_name: vicision
+description: > # this means to ignore newlines until "baseurl:"
+  vision + decision => positive_change
+baseurl: "" # the subpath of your site, e.g. /blog
+twitter_username: 
+github_username:  vicision
+learn_profile: vicision
+email_username: duncan.j.mclachlan@gmail.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]
