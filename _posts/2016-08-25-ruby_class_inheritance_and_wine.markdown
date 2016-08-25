@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Ruby Class Inheritance (and Wine!)"
-date:   2016-08-25 02:26:27 +0000
+title:  "Ruby class inheritance (and wine!)"
+date:   2016-08-24 22:26:27 -0400
 ---
 
 
