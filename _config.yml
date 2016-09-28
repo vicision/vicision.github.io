@@ -1,10 +1,10 @@
 # Site settings
-title: vicision
+title: not nil dot net
 header-img: img/home-bg.png
 email: duncan.j.mclachlan@gmail.com
 copyright_name: vicision
 description: > # this means to ignore newlines until "baseurl:"
-  vision + decision => positive_change
+  blog.nil? => false
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  vicision
