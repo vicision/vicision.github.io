@@ -50,7 +50,7 @@ merlot.fermentable
 => "Merlot grapes"
 ```
 
-Great! We didn't even have to define ```initialize``` for ```Wine``` since it inherited from ```Beverage``` correctly. That's all for now. Next time, we'll work on refactoring and expanding this code, and hopefully get to make one of my favorite beverages: beer!
+Great! We didn't even have to define ```initialize``` for ```Wine``` since it inherited from ```Beverage``` correctly. That's all for now. 
 
 Cheers!
 
