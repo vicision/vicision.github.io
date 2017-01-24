@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "NYC Today, My First CLI Gem "
-date:   2017-01-24 21:45:03 +0000
+title:  "NYC Today, my first CLI gem "
+date:   2017-01-24 16:45:05 -0500
 ---
 
 ![Welcome Screen](http://i.imgur.com/TZrkkXX.png?1)
