@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "NYC Today, my first CLI gem "
+title:  "NYC Today, my CLI data gem "
 date:   2017-01-24 16:45:05 -0500
 ---
 
