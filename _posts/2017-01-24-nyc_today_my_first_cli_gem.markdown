@@ -54,13 +54,13 @@ Now I needed to create my event instances and assign their attributes using CSS 
     get_pages
     @@pages.each do |page|
       page.css(".event-card").each do |event|
-			event_hash = {}
+        event_hash = {}
         url_end = event.css("a").attribute("href").value
-				event_hash[:name] = event.css(".ds-listing-event-title-text").text
-				event_hash[:event_link] = @@main_url + url_end
-				event_hash[:time] = event.css(".dtstart").text
-				event_hash[:venue] = event.css(".ds-venue-name").text
-				event_hash[:event_type] = event.attr("class")
+        event_hash[:name] = event.css(".ds-listing-event-title-text").text
+        event_hash[:event_link] = @@main_url + url_end
+        event_hash[:time] = event.css(".dtstart").text
+        event_hash[:venue] = event.css(".ds-venue-name").text
+        event_hash[:event_type] = event.attr("class")
         NycToday::Event.new(event_hash)
       end
     end
@@ -85,7 +85,7 @@ As you can see, the `.scrape_events` method first calls the `.get_pages` method 
 
 (Thanks to Learn instructor Luke Ghenco and [this mob programming session](https://www.youtube.com/watch?v=2CahNsC5xCs) for showing me this process, by the way! A good explanation of the `send` method can be found [here](https://teamtreehouse.com/community/what-does-the-ruby-send-method-do).)
 
-So, now that I have all these event instances, what next? We need some way to interact with them. In thinking about how I'd want to do that, I realized that just having hundreds of random events listed to read through was not an ideal situation, even thought that's basically how they were listed on the event site. Their sorting criteria apparently is based on popularity or upvotes, but I didn't want to incorporate that into my app. I thought that grouping the events by category and then listing them by time made more logical sense. 
+So, now that I have all these event instances, what next? We need some way to interact with them. In thinking about how I'd want to do that, I realized that just having hundreds of random events listed to read through was not an ideal situation, even though that's basically how they were listed on the event site. Their sorting criteria apparently is based on popularity or upvotes, but I didn't want to incorporate that into my app. I thought that grouping the events by category and then listing them by time made more logical sense. 
 
 ![Menu](http://i.imgur.com/NuUXbtf.png)
 
@@ -99,7 +99,7 @@ When a user inputs a number from the above menu, the following code in the `CLI`
     elsif input.downcase == "exit"
       goodbye
     end
-	end
+  end
 ```
 
 The number chosen is saved as a constant `@@type_choice`, which is then used by the following two methods:
@@ -126,7 +126,7 @@ The first method above calls this method in the `Event` class which takes `@@typ
       event.event_type.downcase == choice.downcase ? event_group << event : nil
     end
     @@sets = event_group.sort_by!{|e|e.time_stamp}
-		sort_events
+    sort_events
   end
 ```
 
@@ -139,7 +139,7 @@ It then sets a constant `@@sets` to that array, sorted by time, and calls `sort_
   end
 ```
 
-The method called first above,`midnight_fix`, simply adjusts the events in the array so that events at midnight or later are at the end of the array, which when sorted by the `time_stamp` attribute reads them as `00:00 AM`and so on, and places them before earlier events. It then slices the array into a number of smaller arrays, which the user then sees displayed as pages in the interface, as below. 
+The method called first above, `midnight_fix`, simply adjusts the events in the array so that events at midnight or later are at the end of the array, which when sorted by the `time_stamp` attribute reads them as `00:00 AM`and so on, and places them before earlier events. It then slices the array into a number of smaller arrays, which the user then sees displayed as pages in the interface, as below. 
 
 ![Event List](http://i.imgur.com/HU8rrhg.png)
 
@@ -155,7 +155,7 @@ This sets the variable `event` to the particular event instance that the user wa
 
 ![Event Info](http://i.imgur.com/o8wFzOO.png)
 
-The user is then able to return to the event listing and go forward in the list to later events or back to earlier ones, or return to the main event category menu to look select a different type of event.
+The user is then able to return to the event listing and go forward in the list to later events or back to earlier ones, or return to the main event category menu to select a different type of event.
 
 And that's pretty much it! It seems so much simpler described here than it actually was in practice. There were numerous hurdles and setbacks throughout the process, and overcoming them and moving on to the next step was a great feeling every time, and a great learning experience. I'm especially happy to have made an app that I'll probably actually use pretty frequently in my day-to-day life. Hopefully others will find it useful too!
 
