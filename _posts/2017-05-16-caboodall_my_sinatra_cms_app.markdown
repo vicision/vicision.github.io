@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Caboodall, my Sinatra CMS app
+title:  Caboodall, my Sinatra CMS
 date:   2017-05-16 16:41:04 -0400
 ---
 
@@ -48,6 +48,8 @@ ApplicationController has the configuration for sessions, view folders and passw
 
 
 `TypesController` simply has the actions for rendering the `index.erb` and `show.erb` views, which display a user's caboodalls of each type and the items in that caboodall type, respectively. 
+
+I should also mention that I used ERB's `yield` in a `layout.erb` file, which allowed me to render each of the other views within the HTML structure designed in `layout.erb`'s body and avoid having to repeat all HTML code for the logo, navigation bar and footer in every view. Also, this was a great refresher on CSS for me, as I struggled at times to style the app the way that I wanted--and I'm sure my stylesheet and implementation is still pretty rough. I used a free stock image of stacks of books in the background, which I blurred and overlaid with a gradiant in Photoshop. The Caboodall logo was designed using a free font called Postface.
 
 Now that I've put you to sleep, I'll wrap this up by saying that this was once again a rewarding experience and I look forward to actually using this system to keep track of all of my books and records. Hopefully it can be of use to others in the future as well. If you ever end up trying it out, let me know what you think!
 
