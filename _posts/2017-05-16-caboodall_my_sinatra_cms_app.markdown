@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Caboodall, my Sinatra CMS app
-date:   2017-05-16 20:41:03 +0000
+date:   2017-05-16 16:41:04 -0400
 ---
 
 ![caboodall_logo](http://i.imgur.com/16HBbaX.png)
